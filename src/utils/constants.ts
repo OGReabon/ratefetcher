@@ -1,4 +1,9 @@
-export const COLORS = {};
+export const COLORS = {
+  blue100: "#33ccff",
+  grey: "#E7E7E7",
+  white: "#FFFFFF",
+  black: "#000000",
+};
 
 export const BREAKPOINTS = {
   xs: 375,

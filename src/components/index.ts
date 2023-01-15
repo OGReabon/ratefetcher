@@ -1,3 +1,5 @@
 import Card from "./Card";
+import Select from "./Select";
+import RatesTable from "./RatesTable";
 
-export { Card };
+export { Card, Select, RatesTable };

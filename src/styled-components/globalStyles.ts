@@ -68,28 +68,21 @@ ol, ul, menu {
 	list-style: none;
 }
 
-/*
- Create a root stacking context
-*/
-#__next {
-  isolation: isolate;
-  height: 100%;
-}
-
 /* CSS RESET END */
 
 /* CUSTOM GLOBAL STYLES START */
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.2;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
-
-/* Remove @artsy/fresnel div box -> replaced by their pseudo-box and their child boxes */
-/* Uncomment below if using @artsy/fresnel */
-/* .fresnel-container {
-    display: contents;
-} */
-
 /* CUSTOM GLOBAL STYLES END */
 
 `;

@@ -1,7 +1,13 @@
 import { BREAKPOINTS } from "../utils/constants";
+import { COLORS } from "../utils/constants";
 
 export const theme = {
-  colors: {},
+  colors: {
+    primary: COLORS.blue100,
+    grey: COLORS.grey,
+    white: COLORS.white,
+    black: COLORS.black,
+  },
   shadows: {},
   gradients: {},
   fontSizes: {

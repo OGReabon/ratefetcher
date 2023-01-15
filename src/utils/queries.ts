@@ -16,9 +16,9 @@ export async function fetchRates() {
   const response = await fetch(
     `${PROXY_SERVER_URL}/${CNB_EXCHANGE_API_URL}/daily.txt?${date}`
   );
-  const data = await response.text();
+  const rawData = await response.text();
 
-  const sanitizedData = rateParser(data);
+  const data = rateParser(rawData);
 
-  return sanitizedData;
+  return data;
 }
