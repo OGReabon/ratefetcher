@@ -1,11 +1,7 @@
 import { CardContainer } from "./Card.styles";
 
-const Card = () => {
-  return (
-    <CardContainer>
-      <h1>Card</h1>
-    </CardContainer>
-  );
+const Card = (children: JSX.Element | JSX.Element[]) => {
+  return <CardContainer>{children}</CardContainer>;
 };
 
 export default Card;

@@ -4,6 +4,8 @@ import { COLORS } from "../utils/constants";
 export const theme = {
   colors: {
     primary: COLORS.blue100,
+    primaryDark: COLORS.blue200,
+    primaryDarker: COLORS.blue300,
     grey: COLORS.grey,
     white: COLORS.white,
     black: COLORS.black,

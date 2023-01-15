@@ -22,3 +22,8 @@ export const rateParser = (data: string) => {
 
   return rateObject;
 };
+
+// helper function to get the currency amount
+export const getCurrencyAmount = (amountCZK: number, rate: number) => {
+  return amountCZK / rate;
+};

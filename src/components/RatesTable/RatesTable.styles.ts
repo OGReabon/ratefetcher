@@ -9,7 +9,7 @@ export const TableContainer = styled.div`
   width: 100%;
   max-width: 800px;
   padding: 0 20px;
-  overflow: hidden;
+  overflow: auto;
   @media (${({ theme }) => theme.mediaQueries.smMax}) {
     max-width: 320px;
     padding: 0 16px;

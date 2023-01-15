@@ -13,7 +13,7 @@ export const SelectBox = styled.select`
   appearance: none;
   padding: 0 30px 0 15px;
   width: 100%;
-  color: white;
+  color: ${({ theme }) => theme.colors.black};
   background-color: (${({ theme }) => theme.colors.primary});
   font-size: 20px;
 `;

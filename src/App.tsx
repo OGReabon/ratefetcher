@@ -1,6 +1,6 @@
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import { Select, RatesTable } from "./components";
+import { ConversionTable, RatesTable, Card } from "./components";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styled-components/theme";
 import GlobalStyle from "./styled-components/globalStyles";
@@ -15,8 +15,7 @@ function App() {
         <GlobalStyle />
         <div className="App">
           <header className="App-header">
-            <Select options={["1", "2", "3"]} />
-            <p>Edit and save to reload.</p>
+            <ConversionTable />
             {/* <RatesTable /> */}
           </header>
         </div>
