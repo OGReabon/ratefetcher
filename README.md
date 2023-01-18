@@ -40,8 +40,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Description
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This app fetches data from CNB API and displays it in a table. It also allows you to input amount in CZK and select currency, then it will display the amount in selected currency.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Possible improvements
+
+- Add flag icons to the table
+- Check which currency is selected in <select> element and set background color to it in the table (would probably require some sort of state context provider as the table does not share state with the form)
