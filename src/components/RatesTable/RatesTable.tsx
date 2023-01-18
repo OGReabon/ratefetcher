@@ -9,6 +9,7 @@ import {
   TableHeaderCell,
   TableDataCell,
 } from "./RatesTable.styles";
+import { CardContainer } from "../ConversionTable";
 
 export const RatesTable = () => {
   const { data, status } = useQuery("rates", fetchRates);
@@ -24,30 +25,32 @@ export const RatesTable = () => {
   const rates = Object.values(data || {});
 
   return (
-    <TableContainer>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHeaderCell>Country</TableHeaderCell>
-            <TableHeaderCell>Currency</TableHeaderCell>
-            <TableHeaderCell>Amount</TableHeaderCell>
-            <TableHeaderCell>Code</TableHeaderCell>
-            <TableHeaderCell>Rate</TableHeaderCell>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {rates.map((rate) => (
-            <TableRow key={rate.code}>
-              <TableDataCell>{rate.country}</TableDataCell>
-              <TableDataCell>{rate.currency}</TableDataCell>
-              <TableDataCell>{rate.amount}</TableDataCell>
-              <TableDataCell>{rate.code}</TableDataCell>
-              <TableDataCell>{rate.rate}</TableDataCell>
+    <CardContainer>
+      <TableContainer>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHeaderCell>Country</TableHeaderCell>
+              <TableHeaderCell>Currency</TableHeaderCell>
+              <TableHeaderCell>Amount</TableHeaderCell>
+              <TableHeaderCell>Code</TableHeaderCell>
+              <TableHeaderCell>Rate</TableHeaderCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHeader>
+          <TableBody>
+            {rates.map((rate) => (
+              <TableRow key={rate.code}>
+                <TableDataCell>{rate.country}</TableDataCell>
+                <TableDataCell>{rate.currency}</TableDataCell>
+                <TableDataCell>{rate.amount}</TableDataCell>
+                <TableDataCell>{rate.code}</TableDataCell>
+                <TableDataCell>{rate.rate}</TableDataCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </CardContainer>
   );
 };
 

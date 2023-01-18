@@ -1,9 +1,10 @@
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import { ConversionTable, RatesTable, Card } from "./components";
+import { ConversionTable, RatesTable } from "./components";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styled-components/theme";
 import GlobalStyle from "./styled-components/globalStyles";
+import { ContentContainer } from "./styled-components/styleComponents";
 
 const queryClient = new QueryClient();
 
@@ -13,12 +14,10 @@ function App() {
       <ReactQueryDevtools initialIsOpen={false} />
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <div className="App">
-          <header className="App-header">
-            <ConversionTable />
-            {/* <RatesTable /> */}
-          </header>
-        </div>
+        <ContentContainer>
+          <ConversionTable />
+          <RatesTable />
+        </ContentContainer>
       </ThemeProvider>
     </QueryClientProvider>
   );

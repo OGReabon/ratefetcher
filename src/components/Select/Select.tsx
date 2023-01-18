@@ -1,4 +1,4 @@
-import { SelectBox, SelectContainer } from "./Select.styles";
+import { SelectBox } from "./Select.styles";
 import { useQuery } from "react-query";
 import { fetchRates } from "../../utils/queries";
 import React from "react";
@@ -14,26 +14,6 @@ const Select = ({
 
   if (status === "loading") {
     return (
-      <SelectContainer>
-        <SelectBox onChange={onChange}>
-          {codes.map((code) => {
-            return (
-              <option key={code} value={code}>
-                {code}
-              </option>
-            );
-          })}
-        </SelectBox>
-      </SelectContainer>
-    );
-  }
-
-  if (status === "error") {
-    return <p>Error fetching data </p>;
-  }
-
-  return (
-    <SelectContainer>
       <SelectBox onChange={onChange}>
         {codes.map((code) => {
           return (
@@ -43,7 +23,26 @@ const Select = ({
           );
         })}
       </SelectBox>
-    </SelectContainer>
+    );
+  }
+
+  if (status === "error") {
+    return <p>Error fetching data </p>;
+  }
+
+  return (
+    <SelectBox onChange={onChange} defaultValue="Select currency">
+      <option disabled selected>
+        Select currency
+      </option>
+      {codes.map((code) => {
+        return (
+          <option key={code} value={code}>
+            {code}
+          </option>
+        );
+      })}
+    </SelectBox>
   );
 };
 

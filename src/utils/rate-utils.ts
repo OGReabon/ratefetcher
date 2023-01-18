@@ -12,6 +12,8 @@ export const rateParser = (data: string) => {
 
   // Get the rates from the lines
   const rates = lines.slice(2);
+  // Remove the last line as it is always undefined
+  rates.splice(-1, 1);
 
   // Create an object with the rates
   const rateObject = rates.reduce((prev, current) => {

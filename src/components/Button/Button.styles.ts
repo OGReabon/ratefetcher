@@ -9,10 +9,12 @@ export const ButtonElement = styled.button`
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 5px 5px 2px 0px ${({ theme }) => theme.colors.grey};
   &:hover {
     background-color: ${({ theme }) => theme.colors.primaryDark};
   }
   &:active {
     background-color: ${({ theme }) => theme.colors.primaryDarker};
+    box-shadow: none;
   }
 `;
